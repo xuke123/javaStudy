@@ -1,4 +1,4 @@
-package thread;
+package thread.chapter2;
 
 public class TemplateMethod {
     public  final void print(String msg){

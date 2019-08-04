@@ -1,6 +1,6 @@
 package thread;
 
-import thread.TemplateMethod;
+import thread.chapter2.TemplateMethod;
 
 public class Main {
     public static void main(String[] args) {

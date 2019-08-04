@@ -1,4 +1,4 @@
-package thread;
+package thread.chapter2;
 
 public class TicketWindow extends Thread {
 

@@ -1,4 +1,4 @@
-package thread;
+package thread.chapter2;
 
 public class TicketWindowsRunnable implements Runnable{
     private int index = 1;

@@ -1,4 +1,4 @@
-package thread;
+package thread.chapter2;
 
 import functionInterface.FuncInteface;
 import functionInterface.FunctionInteface;
