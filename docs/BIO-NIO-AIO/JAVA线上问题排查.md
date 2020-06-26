@@ -1,3 +1,6 @@
+## 线上问题排查
+  ![csdn](https://blog.csdn.net/weixin_45674354/article/details/103698638)
+
 #### CPU负载高
 1. top找到对应进程
 2. top -Hp 对应进程找到对应线程
