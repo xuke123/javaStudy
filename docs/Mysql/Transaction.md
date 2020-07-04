@@ -56,6 +56,7 @@ ACID ACD通过redoLog和UndoLog, 隔离性通过锁实现
    1. 事务2修改该行的值
 
     ![再次修改](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200704211411.png)
+    
     同事务1, 此时undolog是两条记录 ,使用回滚指针连在一起
 
 ### 2.具体规则
