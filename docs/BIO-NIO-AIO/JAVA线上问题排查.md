@@ -29,7 +29,15 @@
  主要是OOM GC问题,堆外内存
 1. 先用free确认一下是否为内存问题
 2. OOM问题
-   a
+   JMAPjmap -dump:format=b,file=filename pid 
+   -XX:+HeapDumpOnOutOfMemoryError启动参数
+3. gc和线程
+   pstreee -p pid |wc -l或 /proc/pid/task
+4. 堆外内存
+   OutOfMemoryError: Direct buffer memory
+   pmap -x pid | sort -rn -k3 | head -30 pid倒排前30大的内存段
 
+#### GC问题
+1. -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps
 
 
