@@ -19,7 +19,10 @@
 ## changeBuffer
 InsertBuffer升级版:DML操作,InsertBuffer,Delete Buffer,Purge Buffer
 
+![概述](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200705163013.png)
+
 ## 合并
+
 * 辅助索引页被读到缓冲池时
 * Insert Buffer Bitmap页被追踪到该辅助索引页无可用空间
 * Master Thread

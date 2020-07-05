@@ -45,5 +45,16 @@
           + Async/Sync Flush Checkpoint 重做日志不可用时,需要强制将一些页面的刷新到磁盘
           + Dirty Page too much 脏页过多
 7. Master Thread
+
+8. AIO 
+   
+   异步读写,IOmerge
+
+9. 刷新邻接页
+    
+   1. 刷新一个脏页时,InnoDB会检测页所在区所有的,如果是脏页,一起刷新
+   2. 主要是想利用合并IO功能
+   3. 固态硬盘可能没有必要;可能会把不怎么脏的页写入,随后又脏了
+
     
      
