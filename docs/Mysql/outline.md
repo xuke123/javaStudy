@@ -17,9 +17,11 @@
    * Page Cleaner Thread
    > 刷新脏页到磁盘,减轻master线程负担
 5. 内存
-    ### [缓存池](https://juejin.im/post/5e240847f265da3e1824c579)
-  
-     ![缓存池数据](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200704231508.png)
+
+### [缓存池](https://juejin.im/post/5e240847f265da3e1824c579)
+   * 参考图
+    ![缓存池数据](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200704231508.png)
+
    * 可多实例,checkpoint技术
    * 查看指令`SHOW ENGINE INNODB STATUS`
    * LRUList FreeList FlushList
