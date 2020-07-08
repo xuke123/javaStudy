@@ -2,7 +2,10 @@
 
 概述
 
-    ![概述](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200708094243.png)
+![概述](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200708094243.png)
+
+上图有错误,类型转化错误属于运行时异常
+IO异常不属于运行时异常
 
 * Throwable 所有异常和错误的基类
 * Error(错误)  Virtual MachineError(OOM SOE) NoClassDefFoundError(类定义错误)
@@ -35,3 +38,20 @@ NoClassDefFoundError 和ClassNotFoundException 区别
 >引起该异常的原因是 JVM 或 ClassLoader 尝试加载某类时在内存中找不到该类的定义，该动作发生在运行期间，即编译时该类存在，但是在运行时却找不到了，可能是变异后被删除了等原因导致；
 >
 >ClassNotFoundException 是一个受查异常，需要显式地使用 try-catch 对其进行捕获和处理，或在方法签名中用 throws 关键字进行声明。当使用 Class.forName, ClassLoader.loadClass 或 ClassLoader.findSystemClass 动态加载类到内存的时候，通过传入的类路径参数没有找到该类，就会抛出该异常；另一种抛出该异常的可能原因是某个类已经由一个类加载器加载至内存中，另一个加载器又尝试去加载它。
+
+异常实践
+
+* 使用finally代码块
+* 优先 明确的异常
+* 对异常进行文档说明
+  > 注解@throws
+* 使用描述性消息描述异常
+* 优先捕获最具体的异常
+* 不要捕获Throwable异常
+* 不要忽略异常
+* 不要记录并抛出异常
+* 包装异常时,不要抛弃原始的异常
+* 不要异常控制程序的流程
+* 使用标准异常,尽量不要自己定制
+* 异常会影响性能
+  > 仅在异常情况下使用异常;在可恢复的异常情况下,使用异常
