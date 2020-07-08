@@ -141,7 +141,7 @@ SQL语句【参考】
    说明:
    SELECT LENGTH( "轻松工作" ); 返回为 12
    SELECT CHARACTER _ LENGTH( "轻松工作" ); 返回为 4
-   如果需要存储表情,那么选择 utf8mb 4 来进行存储,注意它与 utf -8 编码的区别。
+   如果需要存储表情,那么选择 utf8mb4 来进行存储,注意它与 utf-8 编码的区别。
 
 2. 【参考】 TRUNCATE TABLE 比 DELETE 速度快,且使用的系统和事务日志资源少,但 TRUNCATE无事务且不触发 trigger ,有可能造成事故,故不建议在开发代码中使用此语句。
 
