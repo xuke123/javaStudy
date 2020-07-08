@@ -34,3 +34,6 @@
 静态查询分析
 
 使用用户自定义变量
+
+
+select * from orders_ext_23 use index(PRIMARY) where channel="cmb" limit 1;
