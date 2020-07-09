@@ -12,6 +12,8 @@ ACID ACD通过redoLog和UndoLog, 隔离性通过锁实现
   
   redo顺序写入,运行时不需要对redo文件进行读取操作,undo是随机读写的
 
+  InnoDB事务隔离级别是可重复读的,事务隔离级别可以使用锁来实现,InnoDB在此技术上基于undolog MVCC实现了不同隔离级别
+
 ## 一 Redo log
 
 1. 构成

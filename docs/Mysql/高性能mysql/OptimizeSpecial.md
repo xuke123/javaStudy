@@ -1,4 +1,6 @@
-# 特定查询优化
+# 查询优化
+
+## 特定查询优化
 
 优化COUNT()查询
 
@@ -35,5 +37,7 @@
 
 使用用户自定义变量
 
+## 查询优化器提示(hint)
 
-select * from orders_ext_23 use index(PRIMARY) where channel="cmb" limit 1;
+    show indexes from orders_23
+    select * from orders_ext_23 use index(PRIMARY) where channel="cmb" limit 1;
