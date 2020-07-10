@@ -27,6 +27,8 @@ Spring通过事务传播行为控制当前事务如何传播到被嵌套调用�
 
 声明式事务 AOP配置事务,切入点可能出错
 
+![声明式事务](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200709191155.png)
+
 注解事务 @Trainsactional
    Spring 默认回滚是捕获RuntimeException以及子类异常
    ![配置](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200709095732.png)
@@ -38,3 +40,13 @@ Spring通过事务传播行为控制当前事务如何传播到被嵌套调用�
 （1）声明式事务配置切入点表达式写错了，没切中Service中的方法
 （2）Service方法中，把异常给try catch了，但catch里面只是打印了异常信息，没有手动抛出RuntimeException异常
 （3）Service方法中，抛出的异常不属于运行时异常（如IO异常），因为Spring默认情况下是捕获到运行时异常就回滚
+
+
+Spring事务管理是基于接口代理或动态字节码技术
+![代理类型](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200709130829.png)
+
+接口代理只能是public 或public final修饰符
+cglib 扩展被增强类,动态创建其子类进行aop增强植入的, final static final 不能被子类覆盖,不能增强,但protected可以
+不能被Spring进行AOP事务增强,是指这些方法不能启动事务,但是外层方法事务上下文依旧可以传播到这些方法中
+
+
