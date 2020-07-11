@@ -25,4 +25,27 @@ zlend 表明压缩列表末尾
 
 字符串对象
 
+![字符串对象](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200711163525.png)
+
+各种结构
+![int类型存储](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200711163914.png)
+
+![SDS类型存储](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200711163948.png)
+
+![embstr类型存储](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200711164311.png)
+
+列表对象
+
+![](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200711164843.png)
+![](https://raw.githubusercontent.com/xuke123/tuChuang/master/20200711164913.png)
+
+哈希对象
+
+实现方式ziplist和hashtable
+
+
+
+
+
+
 
