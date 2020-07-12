@@ -21,3 +21,5 @@
 
    - 不一定需要double write,slave关闭,可以通过中继日志(space X电脑)
    - 采用其他文件系统有部分写失效防范机制
+
+   参考 [buffer](alibaba.md)
