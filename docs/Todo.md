@@ -16,16 +16,20 @@
 14. [ ] 限流插件
 15. [ ] zset 集合操作
 16. [ ] hystrix
-17. [ ] ali学习文章
+17. [x] ali学习文章
 18. [ ] redis 队列以及订阅
 19. [ ] zookeeper 简单学习
 20. [ ] kfaka消息队列本周学习
-21. [ ] redission 工具看一下 理一下有哪些功能
+21. [x] redission 工具看一下 理一下有哪些功能
 22. [ ] curator工具看一下,配置问题
 23. [ ] 常用设计模式
 24. [ ] 订单系统的状态机设计
 25. [ ] dubbo 
-26. [ ] [布隆过滤器](https://www.jianshu.com/p/e4773b69319d)
+26. [x] [布隆过滤器](https://www.jianshu.com/p/e4773b69319d)
+27. [ ] 设计模式
+28. [x] 一致性hash算法
+29. [ ] compareTo排序问题
+30. [ ] [fork/join实现归并排序](https://blog.csdn.net/qq_17305249/article/details/77853374)
 
 
 数据库应该可以了
