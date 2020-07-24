@@ -30,7 +30,10 @@
 28. [x] 一致性hash算法
 29. [ ] compareTo排序问题
 30. [ ] [fork/join实现归并排序](https://blog.csdn.net/qq_17305249/article/details/77853374)
-
+31. [x] Object等待模型
+32. [ ] 订单缓存原理
+33. [ ] 分析snow和bridge负载均衡策略
+34. [ ] Spring事务传播属性底层源码看一下
 
 数据库应该可以了
 JVM可以了
