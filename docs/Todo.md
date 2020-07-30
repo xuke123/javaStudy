@@ -28,16 +28,28 @@
 26. [x] [布隆过滤器](https://www.jianshu.com/p/e4773b69319d)
 27. [ ] 设计模式
 28. [x] 一致性hash算法
-29. [ ] compareTo排序问题
+29. [x] compareTo排序问题
 30. [ ] [fork/join实现归并排序](https://blog.csdn.net/qq_17305249/article/details/77853374)
 31. [x] Object等待模型
 32. [ ] 订单缓存原理
 33. [ ] 分析snow和bridge负载均衡策略
-34. [ ] Spring事务传播属性底层源码看一下
-35. [ ] Countdown 部分原理需要思考一下
-36. [ ] ForkJoinFool线程池问题
-37. [ ] 七周七并发模型
+34. [x] Spring事务传播属性底层源码看一下
+35. [x] Countdown 部分原理需要思考一下
+36. [ ] ForkJoinPool线程池问题
+37. [x] ~~七周七并发模型~~
 38. [ ] Java并发编程实战
+39. [ ] 并发编程艺术输出processOn
+40. [x] 单例模式
+41. [ ] 订单状态机设计
+42. [ ] 常用算法练一下
+43. [x] dubbo集群容错措施
+44. [ ] 复习一下dubbo
+45. [ ] qmq原理
+46. [ ] dubbo熔断没有看懂!!!!
+
+47. [ ] jvm编译过程
+48. [ ] mysql集群策略
+49. [ ] redis集群问题
 
 数据库应该可以了
 JVM可以了
@@ -50,3 +62,15 @@ zookeeper
 系统设计类
 亿级服务架构设计
 
+
+这句话研究下!!!!
+ CompletableFuture[] futures = goodsOldPrivilegeService.stream()
+                .map(service -> CompletableFuture.supplyAsync(() -> service.queryGoodsPrivilege(goodsPrivilegeRequestDto))
+                        .exceptionally(e -> {
+                            log.error("queryGoodsPrivilege error,username:{},service:{}", goodsPrivilegeRequestDto.getCommonParam().getUn(), service.getClass().getSimpleName(), e);
+                            MonitorBuilder.newMonitor(GoodsMonitorKeys.GOODS_PRIVILEGE).append(service.getClass().getSimpleName()).recordFail();
+                            return null;
+                        }))
+                .toArray(CompletableFuture[]::new);
+
+        CompletableFuture.allOf(futures).join();
