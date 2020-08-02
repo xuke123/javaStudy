@@ -1,4 +1,6 @@
-# todolist
+# 整体计划
+
+## todolist
 
 1. [x] java异常体系
 2. [x] 回滚受异常影响
@@ -50,27 +52,14 @@
 47. [ ] jvm编译过程
 48. [ ] mysql集群策略
 49. [ ] redis集群问题
+50. [ ] 分布式事务seata协议
+51. [ ] ThreadLocal原理
+52. [ ] 故障排查上次还没有搞完!!!!
+53. [ ] http协议
 
-数据库应该可以了
-JVM可以了
+## 攻坚
 
-redis看一下(本周主要)
-多线程主要是AQS和 countDOWN 这些原理性的东西
-zookeeper
-消息队列原理以及简单引用
-
-系统设计类
-亿级服务架构设计
-
-
-这句话研究下!!!!
- CompletableFuture[] futures = goodsOldPrivilegeService.stream()
-                .map(service -> CompletableFuture.supplyAsync(() -> service.queryGoodsPrivilege(goodsPrivilegeRequestDto))
-                        .exceptionally(e -> {
-                            log.error("queryGoodsPrivilege error,username:{},service:{}", goodsPrivilegeRequestDto.getCommonParam().getUn(), service.getClass().getSimpleName(), e);
-                            MonitorBuilder.newMonitor(GoodsMonitorKeys.GOODS_PRIVILEGE).append(service.getClass().getSimpleName()).recordFail();
-                            return null;
-                        }))
-                .toArray(CompletableFuture[]::new);
-
-        CompletableFuture.allOf(futures).join();
+- redis死扣到底(周六)
+- mysql死扣 (周六)
+- 多线程编程 (周天)
+- jvm死扣!!!!!!(周天)

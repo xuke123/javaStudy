@@ -11,12 +11,13 @@
 
    b. 使用cat jstack.log | grep "java.lang.Thread.State" | sort -nr | uniq -c 得到整体把握也可
 5. 观察GC频率
-   jstack -gc pid 1000
+   jstate -gc pid 1000
 6. 上下文切换次数 
    全局:vmstat
    特定:pidstat -w pid
 
 #### 磁盘
+
 1. 查看文件系统状态 df -hl
 2. 查看具体 iostat -dkx 1 nvme0n1
 3. iotop 定位文件读写来源   
@@ -26,7 +27,9 @@
    b. 还可以用lsof -p pid 查看具体线程读写情况
 
 #### 内存
+
  主要是OOM GC问题,堆外内存
+
 1. 先用free确认一下是否为内存问题
 2. OOM问题
    JMAPjmap -dump:format=b,file=filename pid 
@@ -39,5 +42,6 @@
 
 #### GC问题
 1. -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps
+
 
 
