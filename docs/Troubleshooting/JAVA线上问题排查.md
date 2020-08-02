@@ -41,6 +41,7 @@
    pmap -x pid | sort -rn -k3 | head -30 pid倒排前30大的内存段
 
 #### GC问题
+
 1. -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps
 
 
