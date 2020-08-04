@@ -56,6 +56,8 @@
 51. [ ] ThreadLocal原理
 52. [ ] 故障排查上次还没有搞完!!!!
 53. [ ] http协议
+54. [ ] 过期时间的引用
+55. [ ] [http相关知识](https://mp.weixin.qq.com/s/t7ZYT6wBBbFYVBPOSztpRg)
 
 ## 攻坚
 
