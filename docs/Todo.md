@@ -47,8 +47,7 @@
 43. [x] dubbo集群容错措施
 44. [ ] 复习一下dubbo
 45. [ ] qmq原理
-46. [ ] dubbo熔断没有看懂!!!!
-
+46. [x] dubbo熔断没有看懂!!!!
 47. [ ] jvm编译过程
 48. [ ] mysql集群策略
 49. [ ] redis集群问题
@@ -59,6 +58,19 @@
 54. [ ] 过期时间的引用
 55. [ ] [http相关知识](https://mp.weixin.qq.com/s/t7ZYT6wBBbFYVBPOSztpRg)
 56. [ ] java拥塞队列
+57. [ ] 分布式事务 (主要是MQ事务)
+58. [ ] 美团分库分表策略
+59. [ ] 订单ID生成策略
+60. [ ] 正常关闭线程池
+61. [ ] [美团线程池](https://blog.csdn.net/MeituanTech/article/details/105283415)
+62. [ ] ConcurrentLinkedQueue 源码进一步阅读 [参考](https://juejin.im/post/6844903602427805704)
+63. [ ] java动态调试(https://blog.csdn.net/MeituanTech/article/details/102965857)
+64. [ ] 并发编程之美(吃透吧)!!
+65. [ ] redis源码
+66. [ ] Mybatis源码
+67. [ ] tomcat源码
+68. [ ] Spring源码
+69. [ ] 大数据处理
 
 ## 攻坚
 

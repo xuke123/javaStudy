@@ -7,4 +7,4 @@
 5. [ ] Spring企业实战关于事务专题(死磕MYSQL)
 6. [x] cancal
 7. [ ] mysql运维相关
-8. [ ] foam插件学着搞一搞
+8. [x] foam插件学着搞一搞

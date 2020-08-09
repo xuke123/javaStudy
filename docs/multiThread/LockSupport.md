@@ -16,4 +16,6 @@ unsafe类实现的
 
 ### unpark(Thread thread)
 
+* 如果之前没调用过park,调用unpark也会立刻返回
+
 ### void parkNanos(long nanos)
