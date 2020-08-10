@@ -43,3 +43,72 @@
 ## 只读事务
 
 只读事务不会修改任何数据,资源管理器可在此基础做一些优化措施,提高运行性能
+
+## 事务失效情景
+
+@Transactional 可作用在接口,类,类方法上
+
+- 作用在非public方法上
+- 事务传播行为属性设置错误
+
+   1. PROPAGATION_SUPPORTS  如果当前存在事务,则加入到该事务;没有事务以非实物方式运行
+   2. NOT_SUPPORTED 以非事务方式运行,如果当前存在事务,则把当前事务挂起
+   3. PROPAGATION_NEVER 以非事务方式运行,如果当前存在事务,则抛出异常
+
+- @Transactional 注解属性 rollbackFor 设置错误
+  
+  Spring 默认只有在unchecked(继承自RuntimeException的异常)或Error回滚事务
+
+  ![java异常与Spring默认回滚异常](https://pic3.zhimg.com/80/v2-f12130716651131ba42e34a78d976a2c_720w.jpg)
+  
+- 同一个类中方法调用，导致@Transactional失效????
+
+  开发中避免不了会对同一个类里面的方法调用，比如有一个类Test，它的一个方法A，A再调用本类的方法B（不论方法B是用public还是private修饰），但方法A没有声明注解事务，而B方法有。则外部调用方法A之后，方法B的事务是不会起作用的。这也是经常犯错误的一个地方。
+
+  那为啥会出现这种情况？其实这还是由于使用Spring AOP代理造成的，因为只有当事务方法被当前类以外的代码调用时，才会由Spring生成的代理对象来管理。
+
+  ```java
+  //@Transactional
+    @GetMapping("/test")
+    private Integer A() throws Exception {
+        CityInfoDict cityInfoDict = new CityInfoDict();
+        cityInfoDict.setCityName("2");
+        /**
+         * B 插入字段为 3的数据
+         */
+        this.insertB();
+        /**
+         * A 插入字段为 2的数据
+         */
+        int insert = cityInfoDictMapper.insert(cityInfoDict);
+
+        return insert;
+    }
+
+    @Transactional()
+    public Integer insertB() throws Exception {
+        CityInfoDict cityInfoDict = new CityInfoDict();
+        cityInfoDict.setCityName("3");
+        cityInfoDict.setParentCityId(3);
+
+        return cityInfoDictMapper.insert(cityInfoDict);
+    }
+  ```
+
+- 异常被你的 catch“吃了”导致@Transactional失效
+
+- 数据库引擎不支持事务
+
+### 针对同一个类中事务失效的处理办法
+
+- 类或方法上 加上@Transactional注解
+- 编程式事务
+- 重构走类外调用
+- AopContext.currentProxy\
+  ((Service)AopContext.currentProxy()).B()
+- 依赖自身
+- Spring getBean调用这个方法
+- 只要通过this调用问题就不大
+
+## 参考资料
+- [Spring事务失效场景](https://zhuanlan.zhihu.com/p/145897825)
