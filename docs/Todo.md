@@ -73,6 +73,10 @@
 69. [ ] 大数据处理
 70. [ ] [SOA架构、ESB和微服务架构](https://blog.csdn.net/j15533415886/article/details/89818019)
 71. [ ] [easyRpc](https://github.com/yeecode/EasyRPC)
+72. [x] mysql碎片化问题
+73. [ ] Spring Boot学习
+74. [x] [Comparable和Comparator](https://blog.csdn.net/Mr_wxc/article/details/107328572)
+75. [ ] 领域驱动设计??????
 
 ## 攻坚
 
