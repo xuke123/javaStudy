@@ -52,7 +52,7 @@
 48. [ ] mysql集群策略
 49. [ ] redis集群问题
 50. [ ] 分布式事务seata协议
-51. [ ] ThreadLocal原理
+51. [x] ThreadLocal原理
 52. [ ] 故障排查上次还没有搞完!!!!
 53. [ ] http协议
 54. [ ] 过期时间的引用
@@ -77,10 +77,10 @@
 73. [ ] Spring Boot学习
 74. [x] [Comparable和Comparator](https://blog.csdn.net/Mr_wxc/article/details/107328572)
 75. [ ] 领域驱动设计??????
-
-## 攻坚
-
-- redis死扣到底(周六)
-- mysql死扣 (周六)
-- 多线程编程 (周天)
-- jvm死扣!!!!!!(周天)
+76. [ ] http
+77. [ ] Spring bean 周期
+78. [ ] Spring 三级缓存 解决循环依赖
+79. [ ] 消息队列热点
+80. [x] 序列和反序列化
+81. [ ] postman协议精进
+82. [ ] 重构!!
