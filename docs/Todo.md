@@ -84,3 +84,11 @@
 80. [x] 序列和反序列化
 81. [ ] postman协议精进
 82. [ ] 重构!!
+83. [ ] [SpringBean定义](https://www.jianshu.com/p/899bd8089352)
+84. [ ] [为什么需要dubbo](https://juejin.im/post/6844904127076499463)
+85. [ ] 极限编程
+86. [ ] [秒杀系统](https://www.processon.com/view/5a2605dbe4b006e5e9d36334?fromnew=1)
+87. [ ] UML搞活!!!
+88. [ ] 实现领域驱动那本书,尽可能在下周看完
+89. [ ] 领域驱动.pdf看完
+90. [ ] 美团领域驱动 http://dockone.io/article/9757
